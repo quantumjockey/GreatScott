@@ -12,13 +12,18 @@ namespace GreatScott.Model
         public string Symbol
         {
             get;
-            set;
+            private set;
         }
 
         public unit(double _multiplier, string _symbol)
         {
             Multiplier = _multiplier;
             Symbol = _symbol;
+        }
+
+        public void AddBody(string _body)
+        {
+            Symbol += _body;
         }
     }
 }

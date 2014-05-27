@@ -22,7 +22,7 @@ namespace GreatScott.UnitSystems
         {
             foreach (unit item in AvailableUnits)
             {
-                item.Symbol += _body;
+                item.AddBody(_body);
             }
         }
 
