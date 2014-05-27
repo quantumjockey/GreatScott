@@ -42,10 +42,16 @@
     <Compile Include="Model\unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitSystems\IUnitGroup.cs" />
+    <Compile Include="UnitSystems\Metric\AccelerationUnits.cs" />
     <Compile Include="UnitSystems\Metric\DistanceUnits.cs" />
+    <Compile Include="UnitSystems\Metric\EnergyUnits.cs" />
+    <Compile Include="UnitSystems\Metric\ForceUnits.cs" />
+    <Compile Include="UnitSystems\Metric\MassUnits.cs" />
+    <Compile Include="UnitSystems\Metric\PowerUnits.cs" />
     <Compile Include="UnitSystems\Metric\PressureUnits.cs" />
     <Compile Include="UnitSystems\Metric\TimeUnits.cs" />
     <Compile Include="UnitSystems\Metric\VelocityUnits.cs" />
+    <Compile Include="UnitSystems\Metric\ViscosityUnits.cs" />
     <Compile Include="UnitSystems\UnitGroup.cs" />
   </ItemGroup>
   <ItemGroup>
