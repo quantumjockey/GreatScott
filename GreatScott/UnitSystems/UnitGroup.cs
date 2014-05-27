@@ -6,6 +6,12 @@ namespace GreatScott.UnitSystems
 {
     public class UnitGroup
     {
+        public unit SelectedUnit
+        {
+            get;
+            set;
+        }
+
         public ObservableCollection<unit> AvailableUnits
         {
             get;
@@ -24,6 +30,8 @@ namespace GreatScott.UnitSystems
             {
                 item.AddBody(_body);
             }
+
+            SelectedUnit = AvailableUnits[6];
         }
 
         private void PopulateUnitMultipliers()

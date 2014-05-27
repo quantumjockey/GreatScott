@@ -6,5 +6,6 @@ namespace GreatScott.UnitSystems
     interface IUnitGroup
     {
         ObservableCollection<unit> AvailableUnits { get; set; }
+        unit SelectedUnit { get; set; }
     }
 }
