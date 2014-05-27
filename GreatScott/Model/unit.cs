@@ -12,7 +12,7 @@ namespace GreatScott.Model
         public string Symbol
         {
             get;
-            private set;
+            set;
         }
 
         public unit(double _multiplier, string _symbol)
