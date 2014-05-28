@@ -1,11 +1,20 @@
-﻿using GreatScott.Model;
+﻿///////////////////////////////////////
+#region Namespace Directives
+
+using GreatScott.Model;
 using System;
 using System.Collections.ObjectModel;
+
+#endregion
+///////////////////////////////////////
 
 namespace GreatScott.UnitSystems
 {
     public class UnitGroup
     {
+        ////////////////////////////////////////
+        #region Properties
+
         public unit SelectedUnit
         {
             get;
@@ -18,11 +27,21 @@ namespace GreatScott.UnitSystems
             set;
         }
 
+        #endregion
+
+        ////////////////////////////////////////
+        #region Constructor
+
         public UnitGroup()
         {
             AvailableUnits = new ObservableCollection<unit>();
             PopulateUnitMultipliers();
         }
+
+        #endregion
+
+        ////////////////////////////////////////
+        #region Supporting Methods
 
         protected void AddUnitBody(string _body)
         {
@@ -51,5 +70,6 @@ namespace GreatScott.UnitSystems
             AvailableUnits.Add(new unit(1000000000000.0, "p"));
         }
 
+        #endregion
     }
 }
