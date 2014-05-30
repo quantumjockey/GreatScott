@@ -1,8 +1,9 @@
 ﻿using GreatScott.Model;
+using GreatScott.UnitSystems.Base;
 
 namespace GreatScott.UnitSystems.Metric
 {
-    public class PressureUnits : UnitGroup
+    public class PressureUnits : PressureGroup
     {
         public PressureUnits()
         {

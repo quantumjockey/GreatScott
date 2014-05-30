@@ -1,8 +1,9 @@
 ﻿using GreatScott.Model;
+using GreatScott.UnitSystems.Base;
 
 namespace GreatScott.UnitSystems.Metric
 {
-    public class AccelerationUnits : UnitGroup
+    public class AccelerationUnits : AccelerationGroup
     {
         public AccelerationUnits()
         {

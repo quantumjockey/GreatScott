@@ -41,6 +41,16 @@
   <ItemGroup>
     <Compile Include="Model\unit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitSystems\Base\AccelerationGroup.cs" />
+    <Compile Include="UnitSystems\Base\DistanceGroup.cs" />
+    <Compile Include="UnitSystems\Base\EnergyGroup.cs" />
+    <Compile Include="UnitSystems\Base\ForceGroup.cs" />
+    <Compile Include="UnitSystems\Base\MassGroup.cs" />
+    <Compile Include="UnitSystems\Base\PowerGroup.cs" />
+    <Compile Include="UnitSystems\Base\PressureGroup.cs" />
+    <Compile Include="UnitSystems\Base\TimeGroup.cs" />
+    <Compile Include="UnitSystems\Base\VelocityGroup.cs" />
+    <Compile Include="UnitSystems\Base\ViscosityGroup.cs" />
     <Compile Include="UnitSystems\IUnitGroup.cs" />
     <Compile Include="UnitSystems\Metric\AccelerationUnits.cs" />
     <Compile Include="UnitSystems\Metric\DistanceUnits.cs" />

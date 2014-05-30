@@ -1,8 +1,9 @@
 ﻿using GreatScott.Model;
+using GreatScott.UnitSystems.Base;
 
 namespace GreatScott.UnitSystems.Metric
 {
-    public class ForceUnits : UnitGroup
+    public class ForceUnits : ForceGroup
     {
         public ForceUnits()
         {

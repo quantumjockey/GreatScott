@@ -1,8 +1,9 @@
-﻿using GreatScott;
+﻿using GreatScott.Model;
+using GreatScott.UnitSystems.Base;
 
 namespace GreatScott.UnitSystems.Metric
 {
-    public class PowerUnits : UnitGroup
+    public class PowerUnits : PowerGroup
     {
         public PowerUnits()
         {
