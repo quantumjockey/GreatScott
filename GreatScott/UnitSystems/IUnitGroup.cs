@@ -11,7 +11,7 @@ namespace GreatScott.UnitSystems
 {
     interface IUnitGroup
     {
-        // 
+        // Property signatures
         ObservableCollection<unit> AvailableUnits { get; set; }
         unit SelectedUnit { get; set; }
     }
