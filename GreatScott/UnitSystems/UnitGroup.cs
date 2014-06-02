@@ -16,20 +16,20 @@ namespace GreatScott.UnitSystems
         ////////////////////////////////////////
         #region Fields
 
-        private ReadOnlyObservableCollection<unit> _prefixes;
+        private ReadOnlyObservableCollection<unitMultiplier> _prefixes;
 
         #endregion
 
         ////////////////////////////////////////
         #region Properties
 
-        public unit SelectedUnit
+        public unitMultiplier SelectedUnit
         {
             get;
             set;
         }
 
-        public ObservableCollection<unit> AvailableUnits
+        public ObservableCollection<unitMultiplier> AvailableUnits
         {
             get;
             set;
@@ -44,8 +44,8 @@ namespace GreatScott.UnitSystems
 
         public UnitGroup(string _unitString, int _first, int _last)
         {
-            _prefixes = new ReadOnlyObservableCollection<unit>(GenerateUnitMultipliers());
-            AvailableUnits = new ObservableCollection<unit>(AddUnitBody(_unitString, _first, _last));
+            _prefixes = new ReadOnlyObservableCollection<unitMultiplier>(GenerateUnitMultipliers());
+            AvailableUnits = new ObservableCollection<unitMultiplier>(AddUnitBody(_unitString, _first, _last));
             SelectedUnit = SelectDefault();
         }
 
@@ -54,16 +54,16 @@ namespace GreatScott.UnitSystems
         ////////////////////////////////////////
         #region Supporting Methods
 
-        protected List<unit> AddUnitBody(string body, int first, int last)
+        protected List<unitMultiplier> AddUnitBody(string body, int first, int last)
         {
-            List<unit> set = new List<unit>();
+            List<unitMultiplier> set = new List<unitMultiplier>();
             int count = _prefixes.Count;
             int frst = (first > 0) ? first : 0;
             int lst = (last < count) ? last : (count - 1);
 
             for (int i = frst; i <= lst; i++)
             {
-                unit item = _prefixes[i];
+                unitMultiplier item = _prefixes[i];
                 item.AddBody(body);
                 set.Add(item);
             }
@@ -71,26 +71,26 @@ namespace GreatScott.UnitSystems
             return set;
         }
 
-        private ObservableCollection<unit> GenerateUnitMultipliers()
+        private ObservableCollection<unitMultiplier> GenerateUnitMultipliers()
         {
-            ObservableCollection<unit> _baseUnits = new ObservableCollection<unit>();
-            _baseUnits.Add(new unit(0.000000000001, "T"));
-            _baseUnits.Add(new unit(0.000000001, "G"));
-            _baseUnits.Add(new unit(0.000001, "M"));
-            _baseUnits.Add(new unit(0.001, "k"));
-            _baseUnits.Add(new unit(0.01, "h"));
-            _baseUnits.Add(new unit(0.1, "da"));
-            _baseUnits.Add(new unit(1.0, String.Empty));
-            _baseUnits.Add(new unit(10.0, "d"));
-            _baseUnits.Add(new unit(100.0, "c"));
-            _baseUnits.Add(new unit(1000.0, "m"));
-            _baseUnits.Add(new unit(1000000.0, "μ"));
-            _baseUnits.Add(new unit(1000000000.0, "n"));
-            _baseUnits.Add(new unit(1000000000000.0, "p"));
+            ObservableCollection<unitMultiplier> _baseUnits = new ObservableCollection<unitMultiplier>();
+            _baseUnits.Add(new unitMultiplier(0.000000000001, "T"));
+            _baseUnits.Add(new unitMultiplier(0.000000001, "G"));
+            _baseUnits.Add(new unitMultiplier(0.000001, "M"));
+            _baseUnits.Add(new unitMultiplier(0.001, "k"));
+            _baseUnits.Add(new unitMultiplier(0.01, "h"));
+            _baseUnits.Add(new unitMultiplier(0.1, "da"));
+            _baseUnits.Add(new unitMultiplier(1.0, String.Empty));
+            _baseUnits.Add(new unitMultiplier(10.0, "d"));
+            _baseUnits.Add(new unitMultiplier(100.0, "c"));
+            _baseUnits.Add(new unitMultiplier(1000.0, "m"));
+            _baseUnits.Add(new unitMultiplier(1000000.0, "μ"));
+            _baseUnits.Add(new unitMultiplier(1000000000.0, "n"));
+            _baseUnits.Add(new unitMultiplier(1000000000000.0, "p"));
             return _baseUnits;
         }
 
-        private unit SelectDefault()
+        private unitMultiplier SelectDefault()
         {
             int count = AvailableUnits.Count;
             int mid = (count > 1) ? (count / 2) : 0;

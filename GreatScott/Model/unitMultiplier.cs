@@ -1,12 +1,12 @@
 ﻿
 namespace GreatScott.Model
 {
-    public class unit
+    public class unitMultiplier
     {
         ////////////////////////////////////////
         #region Properties
 
-        public string Name
+        public double Multiplier
         {
             get;
             private set;
@@ -23,10 +23,20 @@ namespace GreatScott.Model
         ////////////////////////////////////////
         #region Constructor
 
-        public unit(string _name, string _symbol)
+        public unitMultiplier(double _multiplier, string _symbol)
         {
-            Name = _name;
+            Multiplier = _multiplier;
             Symbol = _symbol;
+        }
+
+        #endregion
+
+        ////////////////////////////////////////
+        #region Public Methods
+
+        public void AddBody(string _body)
+        {
+            Symbol += _body;
         }
 
         #endregion

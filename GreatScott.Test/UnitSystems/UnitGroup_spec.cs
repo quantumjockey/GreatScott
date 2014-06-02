@@ -25,14 +25,14 @@ namespace GreatScott.Test.UnitSystems
         [TestMethod]
         public void AddUnitBody_ValidRange_LengthsAreEqual()
         {
-            List<unit> expected = new List<unit>(){
-            new unit(1.0, "m"),
-            new unit(10.0, "dm"),
-            new unit(100.0, "cm"),
-            new unit(1000.0, "mm"),
-            new unit(1000000.0, "μm")
+            List<unitMultiplier> expected = new List<unitMultiplier>(){
+            new unitMultiplier(1.0, "m"),
+            new unitMultiplier(10.0, "dm"),
+            new unitMultiplier(100.0, "cm"),
+            new unitMultiplier(1000.0, "mm"),
+            new unitMultiplier(1000000.0, "μm")
             };
-            List<unit> actual = AddUnitBody("m", 6, 10);
+            List<unitMultiplier> actual = AddUnitBody("m", 6, 10);
 
             Assert.AreEqual(expected.Count, actual.Count);
         }
@@ -40,14 +40,14 @@ namespace GreatScott.Test.UnitSystems
         [TestMethod]
         public void AddUnitBody_ValidRange_ListFromSpecifiedRange()
         {
-            List<unit> expected = new List<unit>(){
-            new unit(1.0, "m"),
-            new unit(10.0, "dm"),
-            new unit(100.0, "cm"),
-            new unit(1000.0, "mm"),
-            new unit(1000000.0, "μm")
+            List<unitMultiplier> expected = new List<unitMultiplier>(){
+            new unitMultiplier(1.0, "m"),
+            new unitMultiplier(10.0, "dm"),
+            new unitMultiplier(100.0, "cm"),
+            new unitMultiplier(1000.0, "mm"),
+            new unitMultiplier(1000000.0, "μm")
             };
-            List<unit> actual = AddUnitBody("m", 6, 10);
+            List<unitMultiplier> actual = AddUnitBody("m", 6, 10);
 
             CollectionAssert.AreEqual(expected, actual);
         }

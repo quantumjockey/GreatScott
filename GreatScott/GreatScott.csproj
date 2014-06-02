@@ -40,9 +40,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\unit.cs" />
+    <Compile Include="Model\unitMultiplier.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitSystems\IUnitGroup.cs" />
-    <Compile Include="UnitSystems\Templates\MetricTemplate.cs" />
+    <Compile Include="UnitSystems\Templates\MetricCGS.cs" />
+    <Compile Include="UnitSystems\Templates\MetricLegacy.cs" />
+    <Compile Include="UnitSystems\Templates\MetricMKS.cs" />
+    <Compile Include="UnitSystems\Templates\MetricSI.cs" />
     <Compile Include="UnitSystems\UnitGroup.cs" />
   </ItemGroup>
   <ItemGroup />
