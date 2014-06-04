@@ -67,7 +67,7 @@ namespace GreatScott.UnitSystems.Templates
         {
             get
             {
-                return new unit("square metre", @"m" + 253);
+                return new unit("square metre", @"m" + (char)253);
             }
         }
 
@@ -75,7 +75,7 @@ namespace GreatScott.UnitSystems.Templates
         {
             get
             {
-                return new unit("metre per second-squared", @"m/s" + 253);
+                return new unit("metre per second-squared", @"m/s" + (char)253);
             }
         }
 
@@ -195,7 +195,7 @@ namespace GreatScott.UnitSystems.Templates
         {
             get
             {
-                return new unit("pascal-second", "Pa" + 250 + @"s");
+                return new unit("pascal-second", "Pa" + (char)250 + @"s");
             }
         }
 
@@ -203,7 +203,7 @@ namespace GreatScott.UnitSystems.Templates
         {
             get
             {
-                return new unit("square metres per second", @"m" + 253 + @"/s");
+                return new unit("square metres per second", @"m" + (char)253 + @"/s");
             }
         }
 

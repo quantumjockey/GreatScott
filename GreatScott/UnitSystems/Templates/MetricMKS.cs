@@ -43,7 +43,7 @@ namespace GreatScott.UnitSystems.Templates
         {
             get
             {
-                return new unit("metre per second-squared", @"m/s" + 253);
+                return new unit("metre per second-squared", @"m/s" + (char)253);
             }
         }
 
@@ -83,7 +83,7 @@ namespace GreatScott.UnitSystems.Templates
         {
             get
             {
-                return new unit("pascal-second", "Pa" + 250 + @"s");
+                return new unit("pascal-second", "Pa" + (char)250 + @"s");
             }
         }
     }
